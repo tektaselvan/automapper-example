@@ -1,0 +1,27 @@
+﻿@model IEnumerable<automapper_example.DTOs.UserDto>
+
+<h2>Kullanıcı Listesi</h2>
+
+<p>
+    <a asp-controller="User" asp-action="Create" class="btn btn-primary">Yeni Kullanıcı Ekle</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+           
+            <th>UserName</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                
+                <td>@user.FullName</td>
+                <td>@user.Email</td>
+            </tr>
+        }
+</tbody>
+</table>

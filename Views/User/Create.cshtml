@@ -1,0 +1,20 @@
+﻿@model automapper_example.DTOs.UserDto
+
+<h2>Yeni Kullanıcı</h2>
+
+<form method="post">
+    <div class="mb-3">
+        <label class="form-label">Ad Soyad</label>
+        <input class="form-control" asp-for="FullName" />
+        <span class="text-danger" asp-validation-for="FullName"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input class="form-control" asp-for="Email" />
+        <span class="text-danger" asp-validation-for="Email"></span>
+    </div>
+
+    <button class="btn btn-success" type="submit">Kaydet</button>
+    <a class="btn btn-secondary" href="/User/Index">Listeye Dön</a>
+</form>
